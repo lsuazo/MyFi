@@ -4,7 +4,8 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class CSVReader {
-    static void readCSV(File csv_file) {
+    static ArrayList<String[]> readCSV(File csv_file) {
+        ArrayList<String[]> fields = new ArrayList<String[]>();
         BufferedReader freader = null;
         try {
             freader = new BufferedReader(new FileReader(csv_file));
@@ -22,5 +23,6 @@ public class CSVReader {
             System.out.println(currentLine);
         }
 
+        return null;
     }
 }
