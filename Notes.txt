@@ -1,0 +1,16 @@
+* Would be nice:
+	- when going through and categorizing, I can add new rule - and specify if it is regex, etc. etc.
+	- also need to have a list of rules (would be nice if I have a list of unused rules to remove old stuff)
+	- would be nice to have drop down, when choosing category, and autocomplete if choose to type
+	- would also be nice to have a list of todos, for each payment cycle. That I can check off as I go.
+
+
+
+Old notes
+* Main thing - must be easy to add, change or remove rules
+* must also have an easy way to add and remove categories
+	- maybe easy way to reprocess?
+* it woudl be cool if it could read categories, notes from csv (the one that melissa returns to me)
+* it would be awesome if I could auto download API
+	- if not, at least open files, identify which is which (without me having to rename them)
+* minimize number of inputs:

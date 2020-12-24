@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class CSVReader {
 
-    static ArrayList<String[]> readCSV(File csv_file) {
+    public static ArrayList<String[]> readCSV(File csv_file) {
         ArrayList<String[]> fields = new ArrayList<>();
         BufferedReader freader = null;
 
@@ -18,6 +18,9 @@ public class CSVReader {
         String currentLine = null;
         try {
             while((currentLine = freader.readLine()) != null) {
+                if(currentLine.equals("")) { //skip empty lines
+                    continue;
+                }
                 fields.add(currentLine.split(","));
             }
         } catch (IOException e) {
