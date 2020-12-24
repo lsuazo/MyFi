@@ -8,7 +8,8 @@ public class TransactionList extends AbstractTableModel {
     Map<Integer, Transaction.Fields> columnNames = Map.of(
             0, Transaction.Fields.DATE,
             1, Transaction.Fields.AMOUNT,
-            2, Transaction.Fields.DESCRIPTION
+            2, Transaction.Fields.DESCRIPTION,
+            3, Transaction.Fields.CATEGORY
     );
 
     private ArrayList<Transaction> transactions;
@@ -43,5 +44,19 @@ public class TransactionList extends AbstractTableModel {
     public Object getValueAt(int rowIndex, int columnIndex) {
         Transaction trans = transactions.get(rowIndex);
         return trans.getField(columnNames.get(columnIndex));
+    }
+
+    @Override
+    public boolean isCellEditable(int row, int col) {
+        return columnNames.get(col) == Transaction.Fields.CATEGORY;
+    }
+
+    @Override
+    public void setValueAt(Object value, int row, int col) {
+        if (columnNames.get(col) != Transaction.Fields.CATEGORY) {
+            return;
+        } else {
+            transactions.get(row).setCategory((String) value);
+        }
     }
 }

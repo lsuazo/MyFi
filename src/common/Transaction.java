@@ -13,12 +13,15 @@ public class Transaction {
         date = dt;
         amount = amnt;
         description = desc;
+        category = "";
+
     }
 
     static public enum Fields {
         DATE,
         AMOUNT,
-        DESCRIPTION
+        DESCRIPTION,
+        CATEGORY,
     }
 
     public Object getField(Fields field) {
@@ -29,6 +32,8 @@ public class Transaction {
                 return getAmount();
             case DESCRIPTION:
                 return getDescription();
+            case CATEGORY:
+                return getCategory();
         }
         return null;
     }
