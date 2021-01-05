@@ -1,6 +1,6 @@
-package DataLayer;
+package main.java.DataLayer;
 
-import common.Transaction;
+import main.java.common.Transaction;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

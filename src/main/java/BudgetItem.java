@@ -1,3 +1,5 @@
+package main.java;
+
 public class BudgetItem {
     private final String name;
     private final float amount;
@@ -7,11 +9,6 @@ public class BudgetItem {
         amount = amnt;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public float getAmount() {
-        return amount;
-    }
+    public String getName() { return name; }
+    public float getAmount() { return amount; }
 }

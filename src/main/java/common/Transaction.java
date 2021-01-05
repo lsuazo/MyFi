@@ -1,4 +1,4 @@
-package common;
+package main.java.common;
 
 
 import java.time.LocalDate;
@@ -8,34 +8,34 @@ public class Transaction {
     private final float amount;
     private final String description;
     private String category;
+    private String notes;
 
     public Transaction(LocalDate dt, float amnt, String desc) {
         date = dt;
         amount = amnt;
         description = desc;
         category = "";
+        notes = "";
 
     }
 
-    static public enum Fields {
+
+    public enum Fields {
         DATE,
         AMOUNT,
         DESCRIPTION,
         CATEGORY,
+        NOTE,
     }
 
     public Object getField(Fields field) {
-        switch (field) {
-            case DATE:
-                return getDate();
-            case AMOUNT:
-                return getAmount();
-            case DESCRIPTION:
-                return getDescription();
-            case CATEGORY:
-                return getCategory();
-        }
-        return null;
+        return switch (field) {
+            case DATE -> getDate();
+            case AMOUNT -> getAmount();
+            case DESCRIPTION -> getDescription();
+            case CATEGORY -> getCategory();
+            case NOTE -> getNotes();
+        };
     }
 
 
@@ -57,5 +57,13 @@ public class Transaction {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
     }
 }

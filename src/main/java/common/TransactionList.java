@@ -1,4 +1,4 @@
-package common;
+package main.java.common;
 
 import javax.swing.table.AbstractTableModel;
 import java.util.ArrayList;
@@ -9,22 +9,15 @@ public class TransactionList extends AbstractTableModel {
             0, Transaction.Fields.DATE,
             1, Transaction.Fields.AMOUNT,
             2, Transaction.Fields.DESCRIPTION,
-            3, Transaction.Fields.CATEGORY
+            3, Transaction.Fields.CATEGORY,
+            4, Transaction.Fields.NOTE
     );
 
-    private ArrayList<Transaction> transactions;
+    final private ArrayList<Transaction> transactions;
 
-    public TransactionList() {
-        transactions = new ArrayList<>();
-    }
-
-    public void addTransaction(Transaction transaction) {
-        transactions.add(transaction);
-    }
-
-    public int length(){
-        return transactions.size();
-    }
+    public TransactionList() { transactions = new ArrayList<>(); }
+    public void addTransaction(Transaction transaction) { transactions.add(transaction); }
+    public int length(){ return transactions.size(); }
 
     @Override
     public String getColumnName(int column) {

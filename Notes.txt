@@ -3,6 +3,7 @@
 	- also need to have a list of rules (would be nice if I have a list of unused rules to remove old stuff)
 	- would be nice to have drop down, when choosing category, and autocomplete if choose to type
 	- would also be nice to have a list of todos, for each payment cycle. That I can check off as I go.
+	- add a place to write notes about what was done each session. So that I can go back and remember more easily.
 
 
 

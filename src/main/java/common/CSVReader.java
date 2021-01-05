@@ -1,4 +1,4 @@
-package common;
+package main.java.common;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -13,9 +13,10 @@ public class CSVReader {
             freader = new BufferedReader(new FileReader(csv_file));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            return fields;
         }
 
-        String currentLine = null;
+        String currentLine;
         try {
             while((currentLine = freader.readLine()) != null) {
                 if(currentLine.equals("")) { //skip empty lines
@@ -28,20 +29,5 @@ public class CSVReader {
         }
 
         return fields;
-    }
-
-
-    public static void main(String[] args) {
-        String dir = System.getProperty("user.dir");
-        System.out.println(dir);
-        File csv = new File("resources/simple_csv.csv");
-        ArrayList<String[]> result = CSVReader.readCSV(csv);
-        for(String[] strings : result) {
-            for(String string : strings) {
-                System.out.print(string + " ");
-            }
-            System.out.println();
-        }
-
     }
 }

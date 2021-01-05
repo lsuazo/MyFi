@@ -1,8 +1,8 @@
-package DataLayer;
+package main.java.DataLayer;
 
-import common.CSVReader;
-import common.Transaction;
-import common.TransactionList;
+import main.java.common.CSVReader;
+import main.java.common.Transaction;
+import main.java.common.TransactionList;
 
 import java.io.File;
 import java.util.ArrayList;
