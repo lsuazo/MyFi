@@ -38,6 +38,16 @@ public class Transaction {
         };
     }
 
+    public void setField(Fields field, String value){
+        switch (field) {
+            case CATEGORY -> setCategory(value);
+            case NOTE -> setNotes(value);
+            default -> {
+                assert true;
+            }
+        }
+    }
+
 
     public LocalDate getDate() {
         return date;

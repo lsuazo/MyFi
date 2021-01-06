@@ -4,8 +4,9 @@ import main.java.common.CSVReader;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class Budget {
+public class Budget implements Iterable<BudgetItem>{
     final private ArrayList<BudgetItem> items;
 
     public Budget() { items = new ArrayList<>();}
@@ -30,5 +31,24 @@ public class Budget {
             res.add(item.getName());
         }
         return res;
+    }
+
+    public Iterator<BudgetItem> iterator() {
+        return new BudgetIterator();
+    }
+
+    class BudgetIterator implements Iterator<BudgetItem> {
+
+        private int index = 0;
+
+        @Override
+        public boolean hasNext() {
+            return index < items.size();
+        }
+
+        @Override
+        public BudgetItem next() {
+            return items.get(index++);
+        }
     }
 }
