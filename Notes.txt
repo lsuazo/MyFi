@@ -2,8 +2,13 @@
 	- when going through and categorizing, I can add new rule - and specify if it is regex, etc. etc.
 	- also need to have a list of rules (would be nice if I have a list of unused rules to remove old stuff)
 	- would be nice to have drop down, when choosing category, and autocomplete if choose to type
+	- add a log file that the software creates and prints. I can use this later to know what happened.
+	    - notes should go here. Final transfers should go here.
 	- would also be nice to have a list of todos, for each payment cycle. That I can check off as I go.
 	- add a place to write notes about what was done each session. So that I can go back and remember more easily.
+	- Eventually have an automated way to create a data handler: given a particular csv, specify how to match linear
+	    combination of fields, to desired field. Might also need some format specifiers.!!! (make is useful to others;
+	     will need interfaces and abstract classes)
 
 
 
@@ -11,7 +16,16 @@ Old notes
 * Main thing - must be easy to add, change or remove rules
 * must also have an easy way to add and remove categories
 	- maybe easy way to reprocess?
-* it woudl be cool if it could read categories, notes from csv (the one that melissa returns to me)
+* it would be cool if it could read categories, notes from csv (the one that melissa returns to me)
 * it would be awesome if I could auto download API
 	- if not, at least open files, identify which is which (without me having to rename them)
 * minimize number of inputs:
+
+
+Rule Types:
+    * exact match
+    * exact contain
+    * case insensitive versions of the above two
+    * regex match
+
+* Allow rule batches to be applied. This will allow for refinements. (Should note when a change occurs).
